@@ -1,0 +1,14 @@
+pull_request_rules:
+  - name: VM2 source tenant positive control
+    conditions:
+      - title = VM2_SOURCE_POSITIVE
+    actions:
+      comment:
+        message: VM2_XINSTALL_SOURCE_POSITIVE_U3K1
+  - name: VM2 destination inherited merge sink
+    conditions:
+      - author = livastic-vm2-secondary-20260911
+      - title = VM2_DEST_INHERITED_MERGE
+    actions:
+      merge:
+        method: merge
